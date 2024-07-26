@@ -14,6 +14,20 @@ class TvShow {
         this.genre = genre;
     }
 
+    public TvShow(String name, int numberOfEpisodes) {
+        this.name = name;
+        this.numberOfEpisodes = numberOfEpisodes;
+    }
+
+    public TvShow(String name, String genre) {
+        this.name = name;
+        this.genre = genre;
+    }
+
+    public TvShow(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -51,11 +65,16 @@ public class TvShowMain {
             tvShows.add(new TvShow(name, numberOfEpisodes, genre));
         }
 
+        tvShows.add(new TvShow("January 1", 35));
+        tvShows.add(new TvShow("January 2", "Romance"));
+        tvShows.add(new TvShow("January 3"));
+
         System.out.println("\nList of TV Shows:");
         for (TvShow tvShow : tvShows) {
             System.out.println(tvShow);
         }
 
         scanner.close();
+
     }
 }

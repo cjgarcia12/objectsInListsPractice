@@ -12,6 +12,16 @@ class Animal {
         this.isDog = isDog;
     }
 
+    public Animal(String name) {
+        this.name = name;
+        this.isDog = false;
+    }
+
+    public Animal(boolean isDog) {
+        this.name = "Name";
+        this.isDog = isDog;
+    }
+
     public String getName() {
         return name;
     }
@@ -42,6 +52,9 @@ public class AnimalMain {
 
             animals.add(new Animal(name, isDog));
         }
+
+        animals.add(new Animal("blue"));
+        animals.add(new Animal(true));
 
         System.out.println("\nList of Animals:");
         for (Animal animal : animals) {

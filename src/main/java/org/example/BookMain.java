@@ -14,6 +14,26 @@ class Book {
         this.publicationYear = publicationYear;
     }
 
+    public Book(String title, double numberOfPages, double publicationYear) {
+        this.title = title;
+        this.numberOfPages = (int) numberOfPages;
+        this.publicationYear = (int) publicationYear;
+    }
+
+    public Book(String title, int numberOfPages, double publicationYear) {
+        this.title = title;
+        this.numberOfPages = numberOfPages;
+        this.publicationYear = (int) publicationYear;
+    }
+
+    public Book(String title, double numberOfPages, int publicationYear) {
+        this.title = title;
+        this.numberOfPages = (int) numberOfPages;
+        this.publicationYear = publicationYear;
+    }
+
+
+
     public String getTitle() {
         return title;
     }
@@ -53,6 +73,9 @@ public class BookMain {
 
         System.out.print("What would you like to print? (everything/name): ");
         String choice = scanner.nextLine();
+        books.add(new Book("Bioook", 400, 1989.25));
+        books.add(new Book("Biooawdok", 400.34, 1989.25));
+        books.add(new Book("Biogfeook", 400.234, 1989));
 
         if (choice.equals("everything")) {
             System.out.println("\nList of Books:");
